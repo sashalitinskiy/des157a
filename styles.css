@@ -13,6 +13,81 @@ section {
     position: relative;
     width: 700px;
     height: 400px;
+    color: beige;
+    margin: auto;
+    border-radius: 2px;
+}
+
+section > div {
+    position: absolute;
+}
+
+#one {
+    top: 50px;
+    left: 100px;
+}
+
+#two {
+    top: 50px;
+    left: 500px;
+}
+
+.round {
+    position: relative;
+    top:0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#onediv {
+    border: 3px solid plum;
+}
+
+#twodiv {
+    border: 3px solid seagreen;
+}
+
+section:hover #onediv {
+    animation: moveOne 1s ease forwards;
+}
+
+section:hover #twodiv {
+    animation: moveTwo 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes moveOne {
+    0% {
+        background-color: plum;
+        left: 0;
+        opacity: 1;
+    }
+    99% {
+        background-color: plum;
+        left: 400px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes moveTwo {
+    0% {
+        background-color: seagreen;
+        right: 0;
+        opacity: 1;
+    }
+    99% {
+        background-color: seagreen;
+        right: 400px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .monofett-regular {
