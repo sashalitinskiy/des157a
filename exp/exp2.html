@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    
+    <h1>Experiment 2</h1>
+    <h2>Welcome to the Color Picker!</h2>
+    <p>Please choose your favorite color from the list.</p>
+    
+    <script>
+
+        const colors = ["red", "green", "blue", "yellow", "pink", "purple", "brown", "orange"];
+        function favColor() {
+            let favColor = prompt("Enter your favorite color!");
+
+            if (colors.includes(favColor)) {
+                return favColor;
+            } else {
+                alert("Invalid color. Choose another one");
+            }
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        let color = favColor();
+    if (color) { 
+        changeBackgroundColor(color);
+    } else {
+       //--- not sure what to put here? Null?
+    }
+    </script>
+
+</body>
+</html>
