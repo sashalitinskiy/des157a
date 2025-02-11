@@ -1,0 +1,139 @@
+body {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3em;
+  }
+  
+  .highlight {
+    color: #ffef11; 
+    text-decoration: underline; 
+    font-weight: bolder;
+    text-transform: lowercase; 
+}
+
+.highlight2 {
+  color: #ffea4c; 
+  text-decoration: underline; 
+  font-weight: bolder;
+  text-transform: capitalize; 
+} 
+
+  span {
+    font-weight: bolder;
+    color: rgb(255, 232, 55);
+    text-decoration: underline;
+  } 
+
+  #adj1, #clothing, #food, #smelly, #liquid, #dumpster, #adj2 {
+    text-transform: lowercase;
+}
+
+  #name, #scared {
+  text-transform: capitalize;
+}
+
+  h1 {
+    font-size: 80px;
+    color: blanchedalmond;
+    font-family: 'Rock Salt', cursive;
+  }
+  
+  .header-banner {
+    background-color: rgb(7, 11, 42); 
+    padding: 10px 5%; 
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Rock Salt', cursive;
+}
+  
+  main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px; 
+  }
+  
+  #madlib-questions {
+    display: block;
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    border: 5px solid black;
+    z-index: 1;
+  }
+  
+  .hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+  #madlib-output {
+    display: none;
+    z-index: 1;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column; 
+    background: rgb(46, 58, 85); 
+    padding: 10px;
+    border-radius: 8px; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+  form {
+    justify-content: space-between; 
+    gap: 10px; 
+    max-width: 800px; 
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+  }
+  
+  form label, form input {
+    font-size: 23px;
+    padding: 15px 15px 15px 15px;
+    display: inline-block;
+    background-color: white;
+    display: block;
+  }
+
+  #output {
+    background-color: rgb(25, 32, 50); 
+    color: #fff; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    max-width: 900px; 
+    margin: 40px auto; 
+    text-align: center; 
+}
+
+#madlib {
+    font-size: 23px;
+    line-height: 1.9; 
+    font-family: 'Fredericka the Great', cursive;
+}
+
+  
+  input[type="submit"] {
+    background-color: rgb(0, 43, 0);
+    color: rgb(255, 255, 251);
+    justify-content: center;
+    font-size: 16px;
+    padding: 30px 30px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    transform: scale(1.1); 
+    background-color: green; 
+  }

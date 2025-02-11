@@ -6,7 +6,8 @@
     <title>My Crazy Family Madlibs</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Baloo+2:wght@400;500&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
@@ -16,43 +17,60 @@
     </div>
 
     <main>
-        <section id="input">
+        <section id="input" class="showing">
                 <form id="myform">
+                    <div class="form-group">
                     <label for="adj1">An adjective:</label>
                     <input type="text" id="adj1" required>
+                    </div>
           
+                    <div class="form-group">
                     <label for="name">A name:</label>
                     <input type="text" id="name" required>
+                    </div>
               
-                    <label for="adj2">Silly piece of clothing:</label>
-                    <input type="text" id="adj2" required>
+                    <div class="form-group">
+                    <label for="color">Silly clothing item:</label>
+                    <input type="text" id="color" required>
+                    </div>
                 
+                    <div class="form-group">
                     <label for="food">A gross food:</label>
                     <input type="text" id="food" required>
+                    </div>
                 
+                    <div class="form-group">
                     <label for="smelly">Something smelly:</label>
                     <input type="text" id="smelly" required>
+                    </div>
 
+                    <div class="form-group">
                     <label for="liquid">A liquid:</label>
                     <input type="text" id="liquid" required>
+                    </div>  
 
+                    <div class="form-group">
                     <label for="dumpster">Dumpster find:</label>
                     <input type="text" id="dumpster" required>
+                    </div>
 
-                    <label for="scared">Exclamation of fear:</label>
+                    <div class="form-group">
+                    <label for="scared">Shout of fear:</label>
                     <input type="text" id="scared" required>
+                    </div>
 
-                    <label for="adjective2">An adjective:</label>
-                    <input type="text" id="adjective2" required>
+                    <div class="form-group">
+                    <label for="adj2">An adjective:</label>
+                    <input type="text" id="adj2" required>
+                    </div>
+
+                    <input type="submit" value="Dinner's starting! Cmon!" id="submitButton">
                 </form>
-                <input type="submit" value="Dinner's starting! Cmon!">
-            </form>
+               
         </section>
         
-        <section id="output">
-            <p>
-                Last night, me and my family gathered for our annual dinner. As usual it was absolutely ________! It all started when Uncle _______ showed up wearing _______ on his head. Cousin ______ thought it would be a good idea to bring their famous ________ casserole, which smelled like ________ and tasted even worse. Grandma kept asking if everyone had tried her green beans which she made with _______ and a dash of ________.  We all *definitely* loved it! Out of nowhere the dog jumped on the table and mom screamed _____!!! By the end of the night, we agreed it was the most ______ dinner evr and we couldn’t wait for next year’s gathering!  
-            </p>
+        <section id="output" class="hidden">
+            <p id="madlib"></p>
         </section>
     </main>
 

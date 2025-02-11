@@ -33,10 +33,12 @@ main {
   border-radius: 10px; 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
   border: 5px solid black;
+  z-index: 1;
 }
 
 #madlib-output {
   display: none;
+  z-index: -1;
 }
 
 form {
