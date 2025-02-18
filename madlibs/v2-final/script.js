@@ -82,7 +82,7 @@
              
              madlib.innerHTML = myText;
 
-             sections[0].className = 'hidden'; 
+            sections[0].className = 'hidden'; 
             sections[1].className = 'showing'; 
         }
 });
