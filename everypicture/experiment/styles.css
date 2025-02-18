@@ -4,19 +4,35 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200vh; /* Makes scrolling effect visible */
+main {
+    height: 400vh; /* Long enough to allow scrolling */
 }
 
-#wax-image {
-    width: 80%;
-    transition: transform 0.5s ease-in-out;
-    position: relative;
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+figure {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+figure img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Different zoom positions */
+.sect1 { transform: scale(1); }
+.sect2 { transform: scale(1.5) translate(-20%, -10%); }
+.sect3 { transform: scale(1.8) translate(10%, 10%); }
+.sect4 { transform: scale(2) translate(20%, 20%); }
 
 .overlay {
     position: fixed;

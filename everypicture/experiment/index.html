@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Every Picture Experiment </title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Wax Seal Zoom</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <img id="wax-image" src="images/wax.png" alt="Wax seals on fabric">
-        <div class="overlay" id="overlay">
-            <p id="overlay-text"></p>
-        </div>
+    <main>
+        <section id="sect1"><article><h1>Seal 1</h1></article></section>
+        <section id="sect2"><article><h1>Seal 2</h1></article></section>
+        <section id="sect3"><article><h1>Seal 3</h1></article></section>
+        <section id="sect4"><article><h1>Seal 4</h1></article></section>
+    </main>
+
+    <figure>
+        <img src="images/wax.png" alt="Wax Seals" class="sect1">
+    </figure>
+
+    <div class="overlay" id="overlay">
+        <p id="overlay-text"></p>
+        <button onclick="closeOverlay()">Close</button>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
+
 

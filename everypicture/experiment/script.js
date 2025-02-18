@@ -1,30 +1,63 @@
 (function() {
     'use strict';
     
-    document.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    let img = document.getElementById("wax-image");
-
-    if (scrollPosition > 100 && scrollPosition < 300) {
-        img.style.transform = "scale(1.2) translate(-20%, -10%)";
-        showOverlay("Red and Orange Wax Seal");
-    } else if (scrollPosition > 300 && scrollPosition < 500) {
-        img.style.transform = "scale(1.5) translate(-10%, 0%)";
-        showOverlay("Pink, Gold, and White Wax Seal");
-    } else if (scrollPosition > 500 && scrollPosition < 700) {
-        img.style.transform = "scale(1.8) translate(10%, 10%)";
-        showOverlay("Green Wax Seal");
-    } else if (scrollPosition > 700) {
-        img.style.transform = "scale(2) translate(20%, 20%)";
-        showOverlay("Yellow Wax Seal");
-    } else {
-        img.style.transform = "scale(1)";
-        closeOverlay();
-    }
-});
-
-function closeOverlay() {
-    document.getElementById("overlay").style.display = "none";
-}
-
+    window.addEventListener('load', function () {
+        const sections = document.querySelectorAll('section');
+        let sectionTops = [];
+        let pageTop;
+        let counter = 1;
+        let prevCounter = 1;
+        let doneResizing;
+    
+        resetPagePosition();
+    
+        window.addEventListener('scroll', function () {
+            pageTop = window.pageYOffset + 300;
+    
+            if (pageTop > sectionTops[counter]) {
+                counter++;
+            } else if (counter > 1 && pageTop < sectionTops[counter - 1]) {
+                counter--;
+            }
+    
+            if (counter !== prevCounter) {
+                document.querySelector('figure img').className = 'sect' + counter;
+                showOverlay(counter);
+                prevCounter = counter;
+            }
+        });
+    
+        window.addEventListener('resize', function () {
+            clearTimeout(doneResizing);
+            doneResizing = setTimeout(resetPagePosition, 500);
+        });
+    
+        function resetPagePosition() {
+            sectionTops = [];
+            sections.forEach(section => {
+                sectionTops.push(Math.floor(section.getBoundingClientRect().top) + window.pageYOffset);
+            });
+    
+            const pagePosition = window.pageYOffset + 300;
+            counter = 0;
+    
+            sectionTops.forEach(section => { if (pagePosition > section) counter++; });
+        }
+    
+        function showOverlay(counter) {
+            const overlay = document.getElementById("overlay");
+            const overlayText = document.getElementById("overlay-text");
+            const messages = ["Red Wax Seal", "Pink/Yellow Wax Seal", "Green Wax Seal", "Yellow Wax Seal"];
+    
+            if (counter >= 1 && counter <= messages.length) {
+                overlayText.innerText = messages[counter - 1];
+                overlay.style.display = "block";
+            }
+        }
+    
+        window.closeOverlay = function () {
+            document.getElementById("overlay").style.display = "none";
+        }
+    });
+    
 })();
