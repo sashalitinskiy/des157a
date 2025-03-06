@@ -1,19 +1,36 @@
 (function () {
     'use strict';
 
-    document.querySelector('.open').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.getElementById('overlay').className = 'showing';
+    document.querySelectorAll('.wax-container img').forEach((img, index) => {
+        img.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const overlays = document.querySelectorAll('.overlay');
+            if (overlays[index]) {
+                overlays[index].classList.remove('hidden');
+                overlays[index].classList.add('showing');
+            }
+        });
     });
 
-    document.querySelector('.close').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.getElementById('overlay').className = 'hidden';
+    document.querySelectorAll('.close').forEach(closeBtn => {
+        closeBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const overlay = this.closest('.overlay');
+            if (overlay) {
+                overlay.classList.remove('showing');
+                overlay.classList.add('hidden');
+            }
+        });
     });
 
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-            document.getElementById('overlay').className = 'hidden';
+            document.querySelectorAll('.showing').forEach(overlay => {
+                overlay.classList.remove('showing');
+                overlay.classList.add('hidden');
+            });
         }
     });
 
