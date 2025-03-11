@@ -6,6 +6,7 @@
     <title>Grate Expectations</title>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,24 +14,33 @@
         <p class="subtitle">Who will get the cheese???</p>
     </header>
 
+    <section id="gamecontrol">
+        <h2>Start the Game</h2>
+        <button id="startgame">Randomly Pick the First Player and Start</button>
+    </section>
+
     <main class="players">
-        <section class="player">
+        <section class="player" id="player1">
             <h2>Stewart</h2>
             <img src="images/Stewart.jpg" alt="Stewart">
             <p class="cheese-count">0 Cheese</p>
         </section>
 
         <section class="controls">
-            <button>Roll</button>
-            <button>Pass</button>
+            <button id="roll">Roll</button>
+            <button id="pass">Pass</button>
         </section>
 
-        <section class="player">
+        <section class="player" id="player2">
             <h2>Caramel</h2>
             <img src="images/Caramel.jpg" alt="Caramel">
-            <p class="cheese-count">12 Cheese</p>
+            <p class="cheese-count">0 Cheese</p>
         </section>
     </main>
+
+    <section id="game"></section>
+    <section id="actions"></section>
+    <section id="score"></section>
 
     <section class="rules-container">
         <p>Each player takes turns rolling the dice. If you roll a one on both dice, you lose your points. Each point is a cheese. The game ends once either Stewart or Caramel gets 30 cheeses.</p>
