@@ -108,6 +108,11 @@
                 rollAgainButton.style.display = 'none';
             }
 
+            const rollButton = document.querySelector('#roll');
+            if (rollButton) {
+                rollButton.style.display = 'none';
+            }
+
             const quitButton = document.querySelector('#quit');
             if (quitButton) {
                 quitButton.style.display = 'none';

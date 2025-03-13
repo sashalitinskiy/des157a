@@ -14,7 +14,7 @@ body {
 
 h1 {
   color: #1f0f0a;
-  font-size: 9em; /* Slightly smaller to allow more space */
+  font-size: 9em; 
   margin: 10px 0;
   white-space: nowrap;
   position: fixed;
@@ -26,7 +26,7 @@ h1 {
 
 #score {
   position: absolute;
-  top: 0px; /* Adjust this based on your layout, to avoid overlap */
+  top: 0px; 
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -41,7 +41,7 @@ h1 {
   position: absolute;
   /* justify-content: center; */
   font-size: 20px;
-  padding: 5px 10px; /* Smaller buttons */
+  padding: 5px 10px; 
   width: 130px;
 }
 
@@ -76,7 +76,7 @@ h1 {
   position: absolute;
   justify-self: center;
   align-items: center;
-  gap: 110px; /* Closer player sections */
+  gap: 110px; 
 }
 
 .player {
@@ -86,7 +86,7 @@ h1 {
 
 .player img {
   /* position: absolute; */
-  width: 300px; /* Slightly smaller images */
+  width: 300px; 
   border-radius: 10px;
 }
 
@@ -99,7 +99,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px; /* Almost no space between buttons */
+  gap: 2px; 
   font-family: 'Londrina Solid', cursive;
   font-size: 25px;
 }
@@ -108,8 +108,8 @@ button {
   background: #5d4037;
   color: white;
   border: none;
-  padding: 5px 12px; /* Reduced padding */
-  font-size: 1.1em; /* Smaller buttons */
+  padding: 5px 12px;
+  font-size: 1.1em; 
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Londrina Solid', cursive;
@@ -134,7 +134,7 @@ button:hover {
 }
 
 .rules-container p {
-  font-size: 1em; /* Smaller text */
+  font-size: 1.3em; 
   color: #1f0f0a;
 }
 
@@ -142,7 +142,7 @@ button:hover {
   background: transparent;
   color: #1f0f0a;
   border: none;
-  font-size: 1.3em; /* Slightly smaller */
+  font-size: 1.1em; 
   cursor: pointer;
   position: absolute;
   top: 5px;
@@ -150,7 +150,7 @@ button:hover {
 }
 
 #die {
-  margin-bottom: -10px; /* Closer together */
+  margin-bottom: -10px; 
 }
 
 #gamecontrol {
@@ -161,7 +161,7 @@ button:hover {
   margin-top: 100px;
   text-align: center;
   font-size: 25px;
-  min-height: 100px; /* Ensures it doesn't shrink */
+  min-height: 100px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +169,7 @@ button:hover {
 }
 
 #gamecontrol h2 {
-  margin: 5px 0; /* Minimal spacing */
+  margin: 5px 0;
 }
 
 footer {
@@ -178,7 +178,7 @@ footer {
   color: #333;
   margin-top: 20px;
   position: absolute;
-  bottom: 80px;
+  top: 720px;
 }
 
 footer a {
