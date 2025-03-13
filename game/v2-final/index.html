@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1200, height=750">
     <title>Grate Expectations</title>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -11,12 +11,11 @@
 <body>
     <header>
         <h1>GRATE EXPECTATIONS</h1>
-        <p class="subtitle">Who will get the cheese???</p>
     </header>
 
     <section id="gamecontrol">
         <h2>Start the Game</h2>
-        <button id="startgame">Randomly Pick the First Player and Start</button>
+        <button id="startgame">Start Cheesing</button>
     </section>
 
     <main class="players">
@@ -27,8 +26,11 @@
         </section>
 
         <section class="controls">
-            <button id="roll">Roll</button>
             <button id="pass">Pass</button>
+        </section>
+
+        <section id="actions">
+            <button id="roll">Roll</button>
         </section>
 
         <section class="player" id="player2">
@@ -42,12 +44,15 @@
     <section id="actions"></section>
     <section id="score"></section>
 
-    <section class="rules-container">
+    <!-- Overlay Rules Section -->
+    <section class="rules-container" id="rules">
+        <button id="close-rules" class="close-btn">X</button>
         <p>Each player takes turns rolling the dice. If you roll a one on both dice, you lose your points. Each point is a cheese. The game ends once either Stewart or Caramel gets 30 cheeses.</p>
     </section>
 
     <footer>
-        
+        <p>Mouse squeak sound found <a href="https://freesound.org/search/?q=mouse+squeaking+sound&f=&s=Automatic+by+relevance&si_tags=0&si_name=0&si_description=0&si_packname=0&si_sound_id=0&si_username=0&d0=0&d1=*&ig=0&r=0&g=1&dp=0&cm=0&mm=0" target="_blank">here</a>.</p>
     </footer>
+    
 </body>
 </html>
